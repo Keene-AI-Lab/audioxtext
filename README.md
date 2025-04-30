@@ -6,7 +6,7 @@ Dementia is a category of neurodegenerative diseases that entails a long-term an
 
 
 ### Objective  
-Extending last semester’s work on the **ADReSSo-2021** [1] dataset by moving from two separate models—one for audio, one for text—to a single **multimodal** approach. The new pipeline combines **time-based speech features** (eGeMAPS) with **text features** drawn from Whisper transcripts. By looking at *how* something is said and *what* is said at the same time, we test whether the fused view yields a dementia classifier that is sturdier and more generalisable than either source alone.
+Using the **ADReSSo-2021** corpus [1], we extend last semester’s audio- and text-only models to a single **multimodal** approach. Recordings are encoded with frame-level eGeMAPS speech features and transformer-based sentence embeddings from Whisper transcripts. Fusing these vectors, we retrain our classifiers to test whether joining *how* words are spoken with *what* they say improves Alzheimer’s-dementia detection beyond either modality alone.
 
 ### Framework
 
