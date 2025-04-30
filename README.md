@@ -5,8 +5,8 @@ Dementia is a category of neurodegenerative diseases that entails a long-term an
 
 
 
-### Objective
-
+### Objective  
+Extending last semester’s separate audio- and text-based models on the **ADReSSo-2021** challenge corpus, we now merge both streams in a single multimodal pipeline. The system pairs **time-resolved paralinguistic speech features** (eGeMAPS) with **contextual language embeddings** generated from Whisper transcripts. By uniting *how* words are spoken with *what* they say, we test whether the fused representation yields a dementia classifier that is more robust and generalisable than either modality alone.
 
 ### Framework
 
