@@ -16,7 +16,7 @@ Using the **ADReSSo-2021** corpus [1], we extend last semester’s audio- and te
 
 ### Framework
 
-![poster](assets/Multimodal_Alzheimers_Detection.pdf)
+![poster](assets/Multimodal_Alzheimers_Detection.jpeg)
 
 **Figure 1**: Poster.
 <br>
