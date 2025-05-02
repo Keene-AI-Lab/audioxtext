@@ -34,12 +34,15 @@ Each recording is first resampled to 16 kHz with *librosa* and cropped to **pati
 
 The resulting vectors are **z-scored, concatenated, and fed to Random-Forest, XGBoost, and LightGBM classifiers**.  This late-fusion set-up (after Haulcy & Glass [2]) lets us test whether blending prosody with language outperforms unimodal baselines.
 
+<div align="center">
+
 | Feature set            | Tool / model     | Pooled dim. |
 |------------------------|------------------|-------------|
 | eGeMAPS (prosody)      | *openSMILE*      | **88**      |
-| wav2vec 2.0 (speech)   | Base model       | **1 024**   |
+| wav2vec 2.0 (speech)   | Base model       | **1024**   |
 | DistilBERT (language)  | CLS-token mean   | **768**     |
-| **Fusion** (concat)    | —                | **1 880**   |
+| **Fusion** (concat)    | —                | **1880**   |
+</div>
 
 <br>
 
