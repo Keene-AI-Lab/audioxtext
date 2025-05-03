@@ -1,4 +1,10 @@
+
 ## Multimodal Alzheimer’s Detection: Speech & Text
+
+
+
+![poster](assets/Multimodal_Alzheimers_Detection.jpeg)
+
 
 ### Introduction  
 Alzheimer’s dementia (AD) is the world’s leading neuro-degenerative disease, affecting roughly **55 million** people and progressing silently for years before clinical diagnosis. Subtle changes in everyday conversation—rhythm, pitch, word choice—often appear long before costly imaging or invasive tests confirm decline, making speech a promising low-cost screen. Leveraging the balanced doctor–patient dialogues of **ADReSSo-2021** [1], we ask whether a single model that both *listens* to prosody and *reads* transcribed language can flag AD more reliably than audio-only or text-only approaches.
@@ -15,8 +21,6 @@ Using the **ADReSSo-2021** corpus [1], we extend last semester’s audio- and te
 
 
 ### Framework
-
-![poster](assets/Multimodal_Alzheimers_Detection.jpeg)
 
 **Figure 1**: Poster.
 <br>
