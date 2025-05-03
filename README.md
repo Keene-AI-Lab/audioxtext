@@ -22,7 +22,9 @@ Using the **ADReSSo-2021** corpus [1], we extend last semester’s audio- and te
 
 ### Framework
 
-**Figure 1**: Poster.
+![figure01](assets/Figure_01.png)
+**Figure 1.** High-level pipeline for multimodal Alzheimer’s detection: ADReSSo-2021 audio is split into an audio branch(paralinguistic processing → acoustic features) and a text branch (speech-to-text → linguistic features). The resulting vectors are fed to tree-based or neural
+classifiers for AD vs CN prediction.
 <br>
 
 
@@ -53,7 +55,14 @@ The resulting vectors are **z-scored, concatenated, and fed to Random-Forest, XG
 
 
 ### Feature Extraction  
-**Audio path.** Patient speech is windowed at 100 ms and 250 ms with 0 % or 50 % overlap.  Every frame yields 25 eGeMAPS descriptors; mean ± std pooling forms an 88-D prosodic vector.  The same frames feed wav2vec 2.0, whose hidden states are averaged to a 1 024-D embedding.
+
+### Framework
+
+![figure02](assets/Figure_02.png)
+**Figure 2.** Feature-extraction pipeline: audio is windowed, embedded, and joined with Whisper-derived text embeddings to form the final feature vector v.
+
+
+**Audio path.** Patient speech is windowed at 100 ms and 250 ms with 0 % or 50 % overlap.  Every frame yields 25 eGeMAPS descriptors; mean ± std pooling forms an 88-D prosodic vector.  The same frames feed wav2vec 2.0, whose hidden states are averaged to a 1024-D embedding.
 
 **Text path.** Whisper produces time-stamped transcripts; sentence boundaries guide DistilBERT, and the sentence embeddings are averaged to a single 768-D semantic vector.
 
@@ -63,8 +72,13 @@ The eGeMAPS, wav2vec, and DistilBERT vectors are **z-scored, concatenated (1 880
 
 
 
-### Results  
-Figure 1 ranks the best classifier from each stream. **Text-only (DistilBERT + XGBoost)** tops the chart at **82 % accuracy / 0.83 F1**, confirming that word-level information is the single strongest cue. Adding speech boosts the audio baseline: the **multimodal fusion** model reaches **70 % accuracy / 0.74 F1**, edging out the **audio-only** pipeline (**67 % / 0.70 F1**) built on wav2vec 2.0 features. Precision and recall trail the corresponding accuracies by < 3 pp in every case, so each model’s wins and losses are evenly distributed between AD and CN speakers.
+### Results
+
+![figure03](assets/Figure_03.png)
+**Figure 2.** Feature-extraction pipeline: audio is windowed, embedded, and joined with Whisper-derived text embeddings to form the final feature vector v.
+
+
+Figure 3 ranks the best classifier from each stream. **Text-only (DistilBERT + XGBoost)** tops the chart at **82 % accuracy / 0.83 F1**, confirming that word-level information is the single strongest cue. Adding speech boosts the audio baseline: the **multimodal fusion** model reaches **70 % accuracy / 0.74 F1**, edging out the **audio-only** pipeline (**67 % / 0.70 F1**) built on wav2vec 2.0 features. Precision and recall trail the corresponding accuracies by < 3 pp in every case, so each model’s wins and losses are evenly distributed between AD and CN speakers.
 <br>
 
 
